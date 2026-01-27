@@ -9,7 +9,7 @@ import About from "./about/page";
 import FAQ from "./faq/page";
 import Footer from "./footer/page";
 import GDGLoader from "./Loader/page";
-
+import Register from "./Register/page";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -39,6 +39,7 @@ export default function Home() {
       >
         <Navigation />
         <Hero />
+        <Register />
         <CallForSpeakers />
         <Speakers />
         <About />
