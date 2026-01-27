@@ -18,20 +18,20 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50  py-4">
       <div className="flex justify-center items-center px-4">
         {/* Center aligned container */}
         <div className="flex items-center gap-4 md:gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-sm shrink-0">
-            <Image
+            {/* <Image
               src="/images/google-logo.jpeg"
               alt="GDGoC Logo"
               width={32}
               height={32}
               className="w-8 h-8"
-            />
-            <span className="text-xs font-semibold hidden sm:inline">gDi</span>
+            /> */}
+            {/* <span className="text-xs font-semibold hidden sm:inline">gDi</span> */}
           </Link>
 
           {/* Desktop Navigation */}
