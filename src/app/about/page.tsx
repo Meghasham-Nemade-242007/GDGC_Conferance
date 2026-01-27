@@ -7,57 +7,116 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="relative overflow-hidden bg-blue-100 py-16 md:py-24">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left - Decorative and Description */}
-          <div className="relative">
-            {/* Decorative elements */}
-            <div className="absolute -left-8 top-0 w-24 h-48 bg-blue-600 rounded-r-3xl opacity-20" />
-            <div className="absolute bottom-0 -left-16 w-32 h-32 bg-blue-600 rounded-tr-3xl opacity-10" />
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
+          
+          {/* Left - Image Grid */}
+          <div className="relative lg:pr-10">
+            <div className="grid grid-cols-12 gap-4">
+              
+              {/* Top left */}
+              <div className="col-span-3 aspect-square bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-3xl flex items-end justify-start p-4">
+                <div className="w-12 h-12 bg-indigo-400 rounded-2xl opacity-50" />
+              </div>
 
-            <div className="relative z-10 bg-white rounded-2xl p-8 border-2 border-blue-400 shadow-lg">
-              <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-bold mb-6 text-sm">
+              {/* Top middle */}
+              <div className="col-span-5 row-span-2 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-3xl overflow-hidden shadow-lg relative">
+                <div className="absolute top-4 left-4 w-3 h-3 bg-teal-400 rounded-full" />
+                <div className="absolute top-8 left-4 w-3 h-3 bg-teal-400 rounded-full" />
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-6xl">👤</div>
+                </div>
+              </div>
+
+              {/* Top right */}
+              <div className="col-span-4 row-span-2 bg-gradient-to-br from-blue-400 to-blue-500 rounded-3xl overflow-hidden shadow-lg relative">
+                <div className="absolute bottom-4 left-4 w-4 h-4 bg-blue-300 rounded-full" />
+                <div className="absolute top-1/3 left-4 w-4 h-4 bg-blue-300 rounded-full" />
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-7xl">👤</div>
+                </div>
+              </div>
+
+              {/* Bottom left */}
+              <div className="col-span-5 row-span-2 bg-gradient-to-br from-indigo-700 to-indigo-900 rounded-3xl overflow-hidden shadow-lg relative">
+                <div className="absolute bottom-6 right-6 w-8 h-8 bg-indigo-400 rounded-xl opacity-50" />
+                <div className="grid grid-cols-3 gap-1 absolute top-6 left-6">
+                  {[...Array(9)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-1 h-1 bg-indigo-400 rounded-full opacity-30"
+                    />
+                  ))}
+                </div>
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-7xl">👤</div>
+                </div>
+              </div>
+
+              {/* Bottom middle */}
+              <div className="col-span-4 bg-gradient-to-br from-gray-200 to-gray-300 rounded-3xl overflow-hidden shadow-lg relative">
+                <div className="absolute bottom-4 left-4 w-3 h-3 bg-gray-400 rounded-full" />
+                <div className="absolute bottom-4 right-4 w-3 h-3 bg-gray-400 rounded-full" />
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-5xl">👤</div>
+                </div>
+              </div>
+
+              {/* Bottom right */}
+              <div className="col-span-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl overflow-hidden shadow-lg relative">
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-5xl">👤</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Right - Content */}
+          <div className="space-y-8">
+            <div>
+              <div className="inline-block bg-blue-600 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm shadow-lg">
                 About GDGoC WOW
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Welcome to Google Developer Groups on Campus Wonder of Wonders - where innovation meets community!{' '}
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Welcome to Google Developer Groups on Campus{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Wonder of Wonders
+                </span>{' '}
                 <span className="text-yellow-400">✨</span>
               </h2>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
                 GDGoC WoW is an extraordinary annual celebration that brings together the brightest minds from across
                 our global developer community.
               </p>
 
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Join us for an incredible journey filled with learning, innovation, and networking opportunities that
-                will inspire and empower you. No matter your skill level, background, or path, we're in this together -
-                we're building more than just code - we're building the future!
+                will inspire and empower you. No matter your skill level, background, or path, we're in this together —
+                we're building more than just code — we're building the future!
               </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {stats.map((stat, idx) => (
+                <div
+                  key={idx}
+                  className={`${stat.color} text-white rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-transform`}
+                >
+                  <div className="text-3xl font-bold mb-1">{stat.number}</div>
+                  <div className="text-sm font-semibold opacity-90">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right - Stats Cards */}
-          <div className="grid grid-cols-2 gap-6">
-            {stats.map((stat, idx) => (
-              <div
-                key={idx}
-                className={`${stat.color} text-white rounded-3xl p-8 flex flex-col items-center justify-center min-h-48 relative overflow-hidden`}
-              >
-                {/* Decorative puzzle notches */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-blue-100 rounded-full" />
-                <div className="absolute -bottom-8 right-4 w-20 h-20 bg-blue-100 rounded-full opacity-30" />
-                <div className="absolute top-4 -right-8 w-16 h-16 bg-blue-100 rounded-full opacity-30" />
-
-                <div className="relative z-10 text-center">
-                  <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-base md:text-lg font-semibold">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
