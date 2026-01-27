@@ -8,10 +8,10 @@ export default function About() {
   const isInView = useInView(aboutRef, { once: true, margin: "-100px" })
 
   const stats = [
-    { number: '10000+', label: 'Participants', color: 'bg-red-500' },
-    { number: '25+', label: 'Sessions', color: 'bg-blue-600' },
-    { number: '35+', label: 'Speakers', color: 'bg-green-600' },
-    { number: '2', label: 'Days', color: 'bg-amber-400' },
+    // { number: '10000+', label: 'Participants', color: 'bg-red-500' },
+    { number: '35+', label: 'Sessions', color: 'bg-blue-600' },
+    { number: '25+', label: 'Speakers', color: 'bg-green-600' },
+    { number: '3', label: 'Days', color: 'bg-amber-400' },
   ]
 
   return (
