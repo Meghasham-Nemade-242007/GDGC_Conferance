@@ -69,10 +69,19 @@ export default function Speakers() {
   ]
 
   return (
-    <section id="speakers" className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="speakers" className="py-16 md:py-24 relative overflow-hidden">
+      {/* Grid Background */}
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `linear-gradient(90deg, transparent 95%, #4285F4 100%),
+                              linear-gradient(180deg, transparent 95%, #DB4437 100%)`,
+          backgroundSize: '80px 80px',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 relative">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-blue-600">Speakers</span>
           </h2>
@@ -82,7 +91,7 @@ export default function Speakers() {
         </div>
 
         {/* Speakers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {speakers.map((speaker) => (
             <div key={speaker.id} className="flex flex-col items-center text-center">
               {/* Speaker Image */}
@@ -93,7 +102,7 @@ export default function Speakers() {
                   </span>
                 </div>
               </div>
-              
+
               {/* Speaker Info */}
               <h3 className="text-lg font-bold text-gray-900 mb-1">{speaker.name}</h3>
               <p className="text-blue-600 font-semibold text-sm mb-1">{speaker.title}</p>

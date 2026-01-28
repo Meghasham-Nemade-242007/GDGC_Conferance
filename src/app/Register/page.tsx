@@ -12,7 +12,7 @@ export default function Register() {
     seconds: 0,
   })
   const [isMounted, setIsMounted] = useState(false)
-  
+
   const registerRef = useRef(null)
   const isInView = useInView(registerRef, { once: true, margin: "-100px" })
 
@@ -56,16 +56,15 @@ export default function Register() {
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-red-100/30 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-50/40 rounded-full blur-3xl" />
-        
+
         {/* Floating particles */}
         {isMounted && [...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className={`absolute w-2 h-2 rounded-full ${
-              i % 4 === 0 ? 'bg-blue-300/20' :
+            className={`absolute w-2 h-2 rounded-full ${i % 4 === 0 ? 'bg-blue-300/20' :
               i % 4 === 1 ? 'bg-red-300/20' :
-              i % 4 === 2 ? 'bg-yellow-300/20' : 'bg-green-300/20'
-            }`}
+                i % 4 === 2 ? 'bg-yellow-300/20' : 'bg-green-300/20'
+              }`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -83,18 +82,25 @@ export default function Register() {
         ))}
 
         {/* Grid pattern */}
-        <div 
+        {/* <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `linear-gradient(90deg, #4285F4 1px, transparent 1px),
                               linear-gradient(180deg, #4285F4 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
+        /> */}
+        <div className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `linear-gradient(90deg, transparent 95%, #4285F4 100%),
+                              linear-gradient(180deg, transparent 95%, #DB4437 100%)`,
+            backgroundSize: '80px 80px',
+          }}
         />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* GDGC Logo with 3D Tilt Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: -30 }}
@@ -103,14 +109,14 @@ export default function Register() {
           className="flex justify-center mb-12"
         >
           <motion.div
-            whileHover={{ 
+            whileHover={{
               rotateY: 20,
               rotateX: -15,
               scale: 1.08,
             }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="relative cursor-pointer"
-            style={{ 
+            style={{
               perspective: "1000px",
               transformStyle: "preserve-3d"
             }}
@@ -160,10 +166,10 @@ export default function Register() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="block text-gray-900 mb-2">Join Us at</span>
             <span className="bg-gradient-to-r from-blue-600 via-red-500 to-yellow-500 bg-clip-text text-transparent">
-              GDGC Tech Conference 2025
+              GDGC Tech Conference 2026
             </span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Pune's biggest tech event is approaching! Join 500+ developers, innovators, and tech enthusiasts.
           </p>
@@ -217,10 +223,10 @@ export default function Register() {
                 key={index}
                 initial={{ scale: 0, rotate: -180 }}
                 animate={isInView ? { scale: 1, rotate: 0 } : {}}
-                transition={{ 
-                  delay: 0.8 + index * 0.1, 
+                transition={{
+                  delay: 0.8 + index * 0.1,
                   type: "spring",
-                  stiffness: 200 
+                  stiffness: 200
                 }}
                 className="relative group"
               >
@@ -230,9 +236,9 @@ export default function Register() {
                   animate={{ scale: [1, 1.15, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                 />
-                
+
                 {/* Main card */}
-                <motion.div 
+                <motion.div
                   whileHover={{ scale: 1.05, y: -5 }}
                   className={`relative bg-white rounded-3xl p-8 md:p-10 shadow-2xl ${item.shadow} border-2 border-gray-100 group-hover:border-gray-200 transition-all`}
                 >
@@ -248,7 +254,7 @@ export default function Register() {
                   <div className="text-base md:text-lg font-bold text-gray-600 tracking-widest">
                     {item.label}
                   </div>
-                  
+
                   {/* Bottom accent bar */}
                   <motion.div
                     className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${item.color} rounded-b-3xl`}
@@ -269,7 +275,7 @@ export default function Register() {
           transition={{ delay: 1.3, duration: 0.8 }}
           className="flex flex-wrap justify-center gap-6 mb-16"
         >
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05, y: -3 }}
             className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all"
           >
@@ -282,7 +288,7 @@ export default function Register() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05, y: -3 }}
             className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl transition-all"
           >
@@ -295,7 +301,7 @@ export default function Register() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05, y: -3 }}
             className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-lg border border-green-100 hover:shadow-xl transition-all"
           >
@@ -331,14 +337,14 @@ export default function Register() {
                 <FiChevronRight className="text-4xl" />
               </motion.div>
             </span>
-            
+
             {/* Animated shine effect */}
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
               animate={{ x: ['-100%', '200%'] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
             />
-            
+
             {/* Pulse effect */}
             <motion.div
               className="absolute inset-0 bg-white/20 rounded-3xl"
@@ -377,7 +383,7 @@ export default function Register() {
           🔥 Only 100 Seats Left!
         </motion.div>
 
-     
+
       </div>
     </section>
   )

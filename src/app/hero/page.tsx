@@ -615,7 +615,7 @@ export default function Hero() {
                 </span>
                 <span className="block">
                   <span className="text-blue-600">Conference</span>
-                  <span className="text-red-500"> 2025</span>
+                  <span className="text-red-500"> 2026</span>
                 </span>
               </h1>
 

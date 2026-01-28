@@ -8,7 +8,7 @@ export default function About() {
   const isInView = useInView(aboutRef, { once: true, margin: "-100px" })
 
   const stats = [
-    // { number: '10000+', label: 'Participants', color: 'bg-red-500' },
+    { number: '500+', label: 'Participants', color: 'bg-red-500' },
     { number: '35+', label: 'Sessions', color: 'bg-blue-600' },
     { number: '25+', label: 'Speakers', color: 'bg-green-600' },
     { number: '3', label: 'Days', color: 'bg-amber-400' },
@@ -20,6 +20,13 @@ export default function About() {
       id="about"
       className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24"
     >
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `linear-gradient(90deg, transparent 95%, #4285F4 100%),
+                              linear-gradient(180deg, transparent 95%, #DB4437 100%)`,
+          backgroundSize: '80px 80px',
+        }}
+      />
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 -left-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />
@@ -28,18 +35,18 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
-          
+
           {/* Left - Dynamic Asymmetric Grid with varied heights and positions */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="relative lg:pr-10"
           >
             <div className="grid grid-cols-12 gap-4 auto-rows-[80px]">
-              
+
               {/* Top left - Small elevated card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1, duration: 0.6 }}
@@ -52,7 +59,7 @@ export default function About() {
               </motion.div>
 
               {/* Top middle - Tall prominent card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -63,7 +70,7 @@ export default function About() {
                 <div className="absolute top-4 right-4 w-3 h-3 bg-teal-500 rounded-full animate-ping" />
                 <div className="absolute top-8 left-4 w-3 h-3 bg-teal-400 rounded-full opacity-60" />
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     className="text-7xl"
                   >
@@ -74,7 +81,7 @@ export default function About() {
               </motion.div>
 
               {/* Top right - Medium card pushed up */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.15, duration: 0.6 }}
@@ -84,7 +91,7 @@ export default function About() {
                 <div className="absolute bottom-4 left-4 w-4 h-4 bg-blue-300 rounded-full" />
                 <div className="absolute top-1/3 left-4 w-4 h-4 bg-blue-300 rounded-full opacity-50" />
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.15 }}
                     className="text-6xl"
                   >
@@ -94,7 +101,7 @@ export default function About() {
               </motion.div>
 
               {/* Middle left - Large hero card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -114,7 +121,7 @@ export default function About() {
                   ))}
                 </div>
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2, rotate: -5 }}
                     className="text-8xl"
                   >
@@ -125,7 +132,7 @@ export default function About() {
               </motion.div>
 
               {/* Bottom middle - Medium card lowered */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.35, duration: 0.6 }}
@@ -136,7 +143,7 @@ export default function About() {
                 <div className="absolute bottom-4 right-4 w-3 h-3 bg-gray-400 rounded-full" />
                 <div className="absolute top-4 right-4 w-2 h-2 bg-gray-500 rounded-full animate-pulse" />
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2 }}
                     className="text-6xl"
                   >
@@ -146,7 +153,7 @@ export default function About() {
               </motion.div>
 
               {/* Bottom right top - Small elevated */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.25, duration: 0.6 }}
@@ -155,7 +162,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-purple-400/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.25, rotate: 15 }}
                     className="text-6xl relative z-10"
                   >
@@ -165,7 +172,7 @@ export default function About() {
               </motion.div>
 
               {/* New bottom right - Small lowered card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -174,7 +181,7 @@ export default function About() {
               >
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-rose-300/30 rounded-full" />
                 <div className="flex items-center justify-center h-full">
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.2 }}
                     className="text-5xl"
                   >
@@ -185,7 +192,7 @@ export default function About() {
               </motion.div>
 
               {/* Extra small accent card */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.45, duration: 0.6, type: "spring" }}
@@ -201,14 +208,14 @@ export default function About() {
           </motion.div>
 
           {/* Right - Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-8"
           >
             <div>
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ delay: 0.5, type: "spring" }}
@@ -217,7 +224,7 @@ export default function About() {
                 About GDGoC WOW
               </motion.div>
 
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6, duration: 0.6 }}
@@ -230,7 +237,7 @@ export default function About() {
                 <span className="text-yellow-400">✨</span>
               </motion.h2>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.7, duration: 0.6 }}
@@ -240,7 +247,7 @@ export default function About() {
                 our global developer community.
               </motion.p>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8, duration: 0.6 }}
