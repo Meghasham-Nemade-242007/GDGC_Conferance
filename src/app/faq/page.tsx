@@ -98,13 +98,13 @@ export default function FAQ() {
     if (!isClient || typeof window === 'undefined') {
       return {}
     }
-    
+
     const baseTransform = `translate(${(mousePosition.x - window.innerWidth / 2) * xMultiplier}px, ${(mousePosition.y - window.innerHeight / 2) * yMultiplier}px)`
-    
+
     if (rotation) {
       return { transform: `${baseTransform} rotate(${rotation}deg)` }
     }
-    
+
     return { transform: baseTransform }
   }
 
@@ -113,11 +113,11 @@ export default function FAQ() {
     if (!isClient || typeof window === 'undefined') {
       return {}
     }
-    
+
     const xMultiplier = 0.015 + index * 0.005
     const yMultiplier = 0.015 + index * 0.005
     const rotation = Math.sin(index) * 15
-    
+
     return {
       transform: `translate(${(mousePosition.x - window.innerWidth / 2) * xMultiplier}px, ${(mousePosition.y - window.innerHeight / 2) * yMultiplier}px) rotate(${rotation}deg)`,
     }
@@ -128,13 +128,13 @@ export default function FAQ() {
     if (!isClient || typeof window === 'undefined') {
       return {}
     }
-    
+
     const baseTransform = `translate(${(mousePosition.x - window.innerWidth / 2) * xMultiplier}px, ${(mousePosition.y - window.innerHeight / 2) * yMultiplier}px)`
-    
+
     if (additional) {
       return { transform: `${baseTransform} ${additional}` }
     }
-    
+
     return { transform: baseTransform }
   }
 
@@ -144,20 +144,27 @@ export default function FAQ() {
       id="faq"
       className="relative overflow-hidden bg-gradient-to-br from-emerald-400 via-teal-400 to-green-500 py-16 md:py-24"
     >
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `linear-gradient(90deg, transparent 95%, #4285F4 100%),
+                              linear-gradient(180deg, transparent 95%, #DB4437 100%)`,
+          backgroundSize: '80px 80px',
+        }}
+      />
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large green blob - top left */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500 rounded-full opacity-30 blur-3xl animate-blob" />
-        
+
         {/* Medium teal blob - top right */}
         <div className="absolute top-20 -right-32 w-80 h-80 bg-teal-600 rounded-full opacity-25 blur-3xl animate-blob animation-delay-2000" />
-        
+
         {/* Large mint blob - bottom left */}
         <div className="absolute -bottom-32 left-1/4 w-96 h-96 bg-green-400 rounded-full opacity-40 blur-3xl animate-blob animation-delay-4000" />
-        
+
         {/* Medium blob - center right */}
         <div className="absolute top-1/2 -right-24 w-72 h-72 bg-emerald-600 rounded-full opacity-20 blur-3xl animate-blob animation-delay-3000" />
-        
+
         {/* Small accent blobs */}
         <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-lime-400 rounded-full opacity-30 blur-2xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-teal-500 rounded-full opacity-25 blur-2xl animate-blob animation-delay-1000" />
@@ -300,19 +307,17 @@ export default function FAQ() {
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 group-hover:rotate-180 transition-all duration-300">
                     <ChevronDown
                       size={20}
-                      className={`text-white transition-transform duration-300 ${
-                        expandedId === faq.id ? 'rotate-180' : ''
-                      }`}
+                      className={`text-white transition-transform duration-300 ${expandedId === faq.id ? 'rotate-180' : ''
+                        }`}
                     />
                   </div>
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    expandedId === faq.id
-                      ? 'max-h-96 mt-4 pt-4 border-t border-slate-200'
-                      : 'max-h-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${expandedId === faq.id
+                    ? 'max-h-96 mt-4 pt-4 border-t border-slate-200'
+                    : 'max-h-0'
+                    }`}
                 >
                   <p className="text-slate-700 leading-relaxed">
                     {faq.answer}
