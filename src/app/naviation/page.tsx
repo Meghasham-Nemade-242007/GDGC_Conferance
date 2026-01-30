@@ -50,7 +50,7 @@ export default function Navigation() {
               height={40}
               className="w-10 h-10"
             /> */}
-            {/* <span className="text-sm font-semibold hidden sm:inline">gDi</span> */}
+            <span className="text-sm font-semibold hidden sm:inline">gDi</span>
           </Link>
 
           {/* Desktop Navigation */}
