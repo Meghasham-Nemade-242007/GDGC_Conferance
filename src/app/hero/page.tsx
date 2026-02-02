@@ -404,7 +404,7 @@ export default function Hero() {
                     className="overflow-hidden mx-auto"
                   >
                     <div className="text-lg md:text-xl text-gray-600 font-semibold mb-4 whitespace-nowrap">
-                      Tech Conference 2025
+                      The Dev Summit 2026
                     </div>
                   </motion.div>
 
@@ -576,12 +576,15 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-2xl md:text-4xl lg:text-6xl font-black leading-[0.9] uppercase tracking-tighter text-gray-900">
                 <div className="block">
-                  <span className="text-[#4285F4]">A</span>NNUAL{" "}
-                  <span className="text-[#EA4335]">T</span>ECH
+                  <span className="text-[#4285F4]">T</span>HE{" "}
+                  <span className="text-[#EA4335]">D</span>EV
                 </div>
                 <div className="block">
-                  <span className="text-[#FBBC05]">C</span>ONFERENCE{" "}
+                  <span className="text-[#FBBC05]">S</span>UMMIT{" "}
                   <span className="text-[#34A853]">2026</span>
+                  <span className="text-[#FBBC05]">P</span>OVERED BY{" "}
+                  <span className="text-[#FBBC05]">G</span>DGC{" "}
+                  <span className="text-[#FBBC05]">D</span>YPCOE{" "}
                 </div>
               </h1>
 
