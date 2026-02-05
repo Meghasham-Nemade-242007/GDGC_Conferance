@@ -522,16 +522,18 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-8 group relative bg-[#4285F4] text-black font-black text-2xl md:text-2xl py-8 px-12 md:px-20 rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black transition-all overflow-hidden"
               >
-                <span className="relative z-10 flex items-center gap-4">
-                  <span className="text-4xl">🎟️</span>
-                  <span>Register Now</span>
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <FiChevronRight className="text-4xl" />
-                  </motion.div>
-                </span>
+                <a href="https://konfhub.com/widget/the-dev-summit-2026?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=1e1f24&ticketCl=1e1f24&btnColor=002E6E&fontFamily=Hind&borderRadius=10&widget_type=standard&tickets=73448&ticketId=73448%7C">
+                  <span className="relative z-10 flex items-center gap-4">
+                    <span className="text-4xl">🎟️</span>
+                    <span>Register Now</span>
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <FiChevronRight className="text-4xl" />
+                    </motion.div>
+                  </span>
+                </a>
 
                 {/* Subtle dark shimmer for professional depth */}
                 <motion.div
@@ -583,7 +585,7 @@ export default function Hero() {
                 </div>
                 <div className="block">
                   <span className="text-[#34A853]">2026 </span> {" "}
-                  <span className="text-[#4285F4]">P</span>OVERED BY  {" "}
+                  <span className="text-[#4285F4]">P</span>OWERED BY  {" "}
                   <span className="text-[#EA4335]">G</span>DGC  {" "}
                   <span className="text-[#34A853]">D</span>YPCOE  {" "}
                 </div>
