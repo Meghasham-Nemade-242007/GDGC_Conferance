@@ -37,7 +37,7 @@ const DecryptText = ({
         setIsRevealed(true);
       }
       iteration += 1 / 2; // Synchronized speed
-    }, 30);
+    }, 80);
   }, [text]);
 
   useEffect(() => {
@@ -48,9 +48,8 @@ const DecryptText = ({
 
   return (
     <span
-      className={`inline-block transition-all duration-600 ease-out ${className} ${
-        !isRevealed ? "blur-[1px] opacity-80" : "blur-0 opacity-100"
-      }`}
+      className={`inline-block transition-all duration-600 ease-out ${className} ${!isRevealed ? "blur-[1px] opacity-80" : "blur-0 opacity-100"
+        }`}
     >
       {displayValue}
     </span>
@@ -61,74 +60,74 @@ const DecryptText = ({
 const SPEAKERS = [
   {
     id: 1,
-    name: "Aanchal Mishra",
+    name: "Comming Soon",
     title: "Developer Advocate",
     company: "POSTMAN",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-red-500",
   },
   {
     id: 2,
-    name: "Megha Arora",
+    name: "Comming Soon",
     title: "DevRel Strategist & Founder",
     company: "DevRelSquad",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-green-500",
   },
   {
     id: 3,
-    name: "Saurav Jain",
+    name: "Comming Soon",
     title: "Senior Developer Community Manager",
     company: "Apify",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-orange-500",
   },
   {
     id: 4,
-    name: "Bhawna Chauhan",
+    name: "Comming Soon",
     title: "Developer Relations Engineer",
     company: "QuillAI Network",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-blue-500",
   },
   {
     id: 5,
-    name: "Shagufta Bangi",
+    name: "Comming Soon",
     title: "Customer Engineer",
     company: "Google Cloud",
     image:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-blue-500",
   },
   {
     id: 6,
-    name: "Savinder Puri",
+    name: "Comming Soon",
     title: "DevOps Evangelist",
     company: "CloudOps",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-orange-500",
   },
   {
     id: 7,
-    name: "Mahaveer Muttha",
+    name: "Comming Soon",
     title: "Co-founder",
     company: "Tech Startup",
     image:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-green-500",
   },
   {
     id: 8,
-    name: "Pranoti Nandurkar",
+    name: "Comming Soon",
     title: "Technical Architect",
     company: "Enterprise Solutions",
     image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=600&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL-928pzv1nGoyGC6U2m2bwDrHVXpKeoMOuA&s",
     borderColor: "border-red-500",
   },
 ];
@@ -207,11 +206,11 @@ export default function SpeakerGrid() {
                   trigger={isTransitioning}
                   className="text-white text-2xl font-bold leading-none mb-2"
                 />
-                <DecryptText
+                {/* <DecryptText
                   text={speaker.title}
                   trigger={isTransitioning}
                   className="text-gray-300 text-xs font-medium"
-                />
+                /> */}
               </div>
 
               <div
@@ -222,7 +221,7 @@ export default function SpeakerGrid() {
         </div>
 
         {/* Navigation Indicators */}
-        <div className="mt-20 flex justify-center items-center gap-8">
+        {/* <div className="mt-20 flex justify-center items-center gap-8">
           {[0, 1].map((idx) => (
             <button
               key={idx}
@@ -230,14 +229,13 @@ export default function SpeakerGrid() {
                 if (currentPage !== idx) triggerTransition();
               }}
               className={`h-4 rounded-full transition-all duration-500 border-2 border-black
-                ${
-                  currentPage === idx
-                    ? "w-24 bg-blue-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-                    : "w-4 bg-orange-500 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                ${currentPage === idx
+                  ? "w-24 bg-blue-600 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                  : "w-4 bg-orange-500 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                 }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </main>
   );

@@ -173,7 +173,7 @@ export default function Register() {
         {/* Event Quick Info */}
         <div className="flex flex-wrap justify-center gap-6 mb-16">
           {[
-            { icon: <FiCalendar />, label: "Date", val: "March 15, 2025" },
+            { icon: <FiCalendar />, label: "Date", val: "Feb 29-31, 2026" },
             { icon: <FiMapPin />, label: "Venue", val: "DYPCOE, Pune" },
             { icon: <FiClock />, label: "Time", val: "9 AM - 6 PM" },
           ].map((info, i) => (

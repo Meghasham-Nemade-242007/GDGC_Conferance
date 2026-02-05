@@ -22,18 +22,8 @@ export default function About() {
     <section
       ref={aboutRef}
       id="about"
-      // Added font-mono to match speaker grid
       className="relative overflow-hidden bg-white py-16 md:py-24 font-mono"
     >
-      {/* <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(90deg, transparent 95%, #4285F4 100%),
-                            linear-gradient(180deg, transparent 95%, #DB4437 100%)`,
-          backgroundSize: "80px 80px",
-        }}
-      /> */}
-
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 -left-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl" />
         <div className="absolute bottom-20 -right-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl" />
@@ -56,7 +46,15 @@ export default function About() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className={`col-span-4 row-span-2 bg-indigo-600 rounded-[2rem] flex items-end justify-start p-5 relative overflow-hidden group ${neubrutalBorder}`}
               >
-                <div className="w-14 h-14 bg-indigo-400 rounded-2xl opacity-50 border-2 border-black" />
+
+                <div className="flex items-center justify-center h-full">
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    className="text-7xl"
+                  >
+                    👤
+                  </motion.div>
+                </div>
               </motion.div>
 
               <motion.div
@@ -180,7 +178,7 @@ export default function About() {
                 transition={{ delay: 0.5, type: "spring" }}
                 className="inline-block bg-blue-600 text-white px-5 py-2 rounded-full font-black mb-6 text-sm border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-widest"
               >
-                About GDGoC WOW
+                About
               </motion.div>
 
               <motion.h2
@@ -189,8 +187,8 @@ export default function About() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="text-3xl md:text-5xl font-black text-black mb-6 leading-tight tracking-tighter uppercase"
               >
-                Welcome to Google Developer Groups{" "}
-                <span className="text-blue-600">WOW</span> ✨
+                Welcome to{" "}
+                <span className="text-blue-600">The Dev Summit 2026</span> ✨
               </motion.h2>
 
               <motion.p
@@ -199,9 +197,9 @@ export default function About() {
                 transition={{ delay: 0.7, duration: 0.6 }}
                 className="text-black text-lg mb-4 leading-relaxed font-bold"
               >
-                GDGoC WoW is an extraordinary annual celebration that brings
-                together the brightest minds from across our global developer
-                community.
+                The Dev Summit is the premier annual conference that brings
+                together the brightest developers, innovators, and tech leaders
+                from across the ecosystem.
               </motion.p>
 
               <motion.p
@@ -210,8 +208,9 @@ export default function About() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="text-gray-600 text-lg leading-relaxed mb-8"
               >
-                Join us for an incredible journey filled with learning,
-                innovation, and networking opportunities.
+                Powered by GDGC DYPCOE, this 3-day summit features cutting-edge
+                sessions, hands-on workshops, and unparalleled networking
+                opportunities with industry experts and fellow developers.
               </motion.p>
             </div>
 

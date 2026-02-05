@@ -134,15 +134,14 @@ export default function Hero() {
                     return (
                       <motion.div
                         key={i}
-                        className={`absolute w-3 h-3 rounded-full ${
-                          i % 4 === 0
-                            ? "bg-blue-500"
-                            : i % 4 === 1
-                              ? "bg-red-500"
-                              : i % 4 === 2
-                                ? "bg-yellow-500"
-                                : "bg-green-500"
-                        }`}
+                        className={`absolute w-3 h-3 rounded-full ${i % 4 === 0
+                          ? "bg-blue-500"
+                          : i % 4 === 1
+                            ? "bg-red-500"
+                            : i % 4 === 2
+                              ? "bg-yellow-500"
+                              : "bg-green-500"
+                          }`}
                         style={{
                           left: `${left}%`,
                           top: `${top}%`,
@@ -366,19 +365,18 @@ export default function Hero() {
                         {["D", "Y", "P", "C", "O", "E"].map((letter, index) => (
                           <motion.span
                             key={index}
-                            className={`text-xl md:text-2xl font-bold ${
-                              index % 6 === 0
-                                ? "text-blue-600"
-                                : index % 6 === 1
-                                  ? "text-red-500"
-                                  : index % 6 === 2
-                                    ? "text-yellow-500"
-                                    : index % 6 === 3
-                                      ? "text-green-600"
-                                      : index % 6 === 4
-                                        ? "text-blue-500"
-                                        : "text-red-400"
-                            }`}
+                            className={`text-xl md:text-2xl font-bold ${index % 6 === 0
+                              ? "text-blue-600"
+                              : index % 6 === 1
+                                ? "text-red-500"
+                                : index % 6 === 2
+                                  ? "text-yellow-500"
+                                  : index % 6 === 3
+                                    ? "text-green-600"
+                                    : index % 6 === 4
+                                      ? "text-blue-500"
+                                      : "text-red-400"
+                              }`}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 1.2 + index * 0.1 }}
@@ -555,9 +553,12 @@ export default function Hero() {
             {/* Google Developer Groups Badge (Preserved) */}
             <div className="inline-flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-sm border border-gray-200">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 bg-gradient-to-r from-blue-600 to-red-600 rounded flex items-center justify-center">
+                {/* <div className="w-7 h-7 bg-gradient-to-r from-blue-600 to-red-600 rounded flex items-center justify-center">
                   <span className="text-white font-bold text-sm">G</span>
-                </div>
+                </div> */}
+                <img src="/images/gdglogo.webp"
+                  className="w-8 h-8 md:w-8 md:h-8 object-contain drop-shadow-2xl"
+                />
                 <div>
                   <p className="text-sm font-semibold text-gray-900">
                     <span className="text-blue-600">
@@ -566,7 +567,7 @@ export default function Hero() {
                     <span className="text-red-600"> OnCampus</span>
                   </p>
                   <p className="text-xs text-gray-500">
-                    Dr. D. Y. Patil College of Engineering
+                    D. Y. Patil College of Engineering Pune
                   </p>
                 </div>
               </div>

@@ -12,33 +12,33 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: 1,
-    question: "What is Google Developer Groups on Campus Pune's WOW event?",
+    question: "What is The Dev Summit 2026?",
     answer:
-      'GDGoC WoW is an extraordinary annual celebration that brings together the brightest minds from across the global developer community. It\'s a unique platform for learning, innovation, and networking.',
+      "The Dev Summit 2026 is a premier annual developer conference that brings together developers, tech leaders, and innovators from across the ecosystem. It's a platform for learning cutting-edge technologies, hands-on workshops, and networking with industry experts.",
   },
   {
     id: 2,
-    question: 'When and where will the WOW event take place?',
+    question: 'When and where will The Dev Summit take place?',
     answer:
-      'The event will be held on March 15-16, 2024 at the Pune Convention Center. Registration starts at 8:00 AM with sessions beginning at 9:00 AM.',
+      'The summit will be held on March 15-17, 2026 at Dr. D. Y. Patil College of Engineering, Pune. Registration starts at 8:00 AM with sessions beginning at 9:00 AM each day.',
   },
   {
     id: 3,
     question: 'How can I register for the event?',
     answer:
-      'You can register for the event by clicking the "Register Now" button on our website. Registration is free but limited to the first 10,000 participants. Early registration is encouraged.',
+      'You can register for the event by clicking the "Register Now" button on our website. Registration is free but limited to the first 500 participants. Early registration is recommended as spots fill up quickly.',
   },
   {
     id: 4,
-    question: 'What topics will be covered at the WOW event?',
+    question: 'What topics will be covered at The Dev Summit?',
     answer:
-      'We\'ll cover a wide range of topics including Web Development, Mobile Development, Cloud Computing, AI/ML, Flutter, Firebase, Google Cloud, and many more cutting-edge technologies.',
+      'We cover a wide range of topics including Web Development (React, Next.js), Mobile Development (Flutter, React Native), Cloud Computing (Google Cloud, AWS), AI/ML, DevOps, Open Source technologies, and emerging tech trends.',
   },
   {
     id: 5,
-    question: 'Will there be networking opportunities?',
+    question: 'Will there be hands-on workshops?',
     answer:
-      'Absolutely! We have dedicated networking sessions, lunch breaks, and evening meetups where you can connect with fellow developers, speakers, and industry experts.',
+      'Yes! We have dedicated workshop sessions where you can get hands-on experience with various technologies. These workshops are led by industry experts and provide practical skills you can apply immediately.',
   },
 ]
 
@@ -103,7 +103,6 @@ export default function FAQ() {
       id="faq"
       className="relative overflow-hidden bg-white py-16 md:py-24 font-mono"
     >
-    
 
       {/* Floating Icons & Symbols (Original Logic, Styled for Contrast) */}
       {isClient && (
@@ -141,10 +140,10 @@ export default function FAQ() {
             FAQ's
           </div>
           <h2 className="text-4xl md:text-7xl font-black text-black mb-4 uppercase tracking-tighter">
-            WE GOT <span className="text-green-600">ANSWERS</span>
+            GOT <span className="text-green-600">QUESTIONS?</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto font-bold uppercase tracking-tight">
-            Find answers to the most asked questions about GDGoC WOW Pune event
+            Find answers about The Dev Summit 2026
           </p>
         </div>
 
@@ -153,7 +152,7 @@ export default function FAQ() {
           <div className="inline-flex items-center gap-3 bg-white border-[3px] border-black px-6 py-3 rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
             <div className="w-3 h-3 bg-yellow-400 rounded-full border-2 border-black animate-pulse" />
             <h3 className="text-black text-lg font-black uppercase tracking-widest">
-              EVENT INFO:
+              SUMMIT INFO:
             </h3>
           </div>
         </div>
@@ -168,11 +167,10 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
-                className={`w-full text-left bg-white border-[3px] border-black rounded-2xl p-6 transition-all duration-300 relative overflow-hidden ${
-                  expandedId === faq.id 
-                  ? 'translate-x-1 translate-y-1 shadow-none bg-emerald-50' 
+                className={`w-full text-left bg-white border-[3px] border-black rounded-2xl p-6 transition-all duration-300 relative overflow-hidden ${expandedId === faq.id
+                  ? 'translate-x-1 translate-y-1 shadow-none bg-emerald-50'
                   : 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1'
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between gap-4 relative z-10">
                   <h3 className="text-lg md:text-xl font-black text-black pr-4 uppercase tracking-tight">
@@ -184,9 +182,8 @@ export default function FAQ() {
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    expandedId === faq.id ? 'max-h-96 mt-4 pt-4 border-t-2 border-black' : 'max-h-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${expandedId === faq.id ? 'max-h-96 mt-4 pt-4 border-t-2 border-black' : 'max-h-0'
+                    }`}
                 >
                   <p className="text-black text-lg font-bold leading-relaxed">
                     {faq.answer}
@@ -201,11 +198,11 @@ export default function FAQ() {
         <div className="text-center">
           <p className="text-black text-xl font-black mb-8 flex items-center justify-center gap-2 uppercase tracking-widest">
             <Star className="text-red-500 fill-red-500" />
-            Have more Questions?
+            Still have questions?
             <Star className="text-red-500 fill-red-500" />
           </p>
           <button className="bg-blue-600 text-white font-black py-5 px-12 rounded-full border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:shadow-none hover:translate-x-1 hover:translate-y-1 text-xl uppercase tracking-widest">
-            Contact Us
+            <a href='https://gdg.community.dev/gdg-on-campus-dy-patil-college-of-engineering-pune-india/'>Contact Us</a>
           </button>
         </div>
       </div>
